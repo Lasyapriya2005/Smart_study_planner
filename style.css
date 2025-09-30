@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+header {
+  background: #007bff;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #343a40;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.landing-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.badges {
+  margin-top: 20px;
+  font-size: 20px;
+}
+#time-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#time-table th,
+#time-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#time-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+#time-table td {
+  background-color: #f9f9f9;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #e1e1e1;
+}
+
+body.dark header {
+  background: #1f1f1f;
+}
+
+body.dark nav {
+  background: #222;
+}
+
+body.dark .card {
+  background: #1f1f1f;
+  color: #e1e1e1;
+}

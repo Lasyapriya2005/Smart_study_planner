@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notes - Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayNotes(); loadTheme();">
+    <header>
+      <h1>📝 Notes</h1>
+      <button onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="reminders.html">Reminders</a>
+      <a href="progress.html">Progress</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+
+    <div class="container">
+      <div class="card">
+        <h3>Add Note</h3>
+        <textarea
+          id="noteInput"
+          placeholder="Write your note here..."
+          rows="4"
+          cols="40"
+        ></textarea
+        ><br />
+        <button onclick="addNote(document.getElementById('noteInput').value)">
+          Add
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Your Notes</h3>
+        <ul id="noteList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

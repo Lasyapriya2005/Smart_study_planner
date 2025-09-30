@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calendar - Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayEvents(); loadTheme();">
+    <header>
+      <h1>📅 Study Calendar</h1>
+      <button onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="reminders.html">Reminders</a>
+      <a href="progress.html">Progress</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+
+    <div class="container">
+      <div class="card">
+        <h3>Add Event</h3>
+        <input type="date" id="eventDate" />
+        <input type="text" id="eventInput" placeholder="Enter event" />
+        <button
+          onclick="addEvent(document.getElementById('eventDate').value, document.getElementById('eventInput').value)"
+        >
+          Add
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Events</h3>
+        <ul id="eventList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

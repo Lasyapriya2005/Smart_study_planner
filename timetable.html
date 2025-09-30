@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timetable - Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayTimetable(); loadTheme();">
+    <header>
+      <h1>📖 Study Timetable</h1>
+      <button onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="reminders.html">Reminders</a>
+      <a href="progress.html">Progress</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+    <h2>Weekly Time Table</h2>
+    <table id="time-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>08:00 - 09:00</td>
+          <td id="mon-8">Math</td>
+          <td id="tue-8">English</td>
+          <td id="wed-8">Science</td>
+          <td id="thu-8">History</td>
+          <td id="fri-8">PE</td>
+          <td id="sat-8">Art</td>
+        </tr>
+        <tr>
+          <td>09:00 - 10:00</td>
+          <td id="mon-9">Physics</td>
+          <td id="tue-9">Chemistry</td>
+          <td id="wed-9">Biology</td>
+          <td id="thu-9">Geography</td>
+          <td id="fri-9">Music</td>
+          <td id="sat-9">Free</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <div class="container">
+      <div class="card">
+        <h3>Add Timetable Slot</h3>
+        <select id="daySelect">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+        <input type="text" id="subjectInput" placeholder="Enter subject" />
+        <button
+          onclick="saveTimetable(document.getElementById('daySelect').value, document.getElementById('subjectInput').value)"
+        >
+          Add
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Your Timetable</h3>
+        <ul id="timetableList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

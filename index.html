@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Smart Study Planner - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayTasks(); displayProgress(); loadTheme();">
+    <header>
+      <h1>📚 Smart Study Planner</h1>
+      <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="reminders.html">Reminders</a>
+      <a href="progress.html">Progress</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+
+    <div class="container">
+      <div class="card">
+        <h2>Welcome Back 👋</h2>
+        <p>Here are your upcoming tasks:</p>
+        <ul id="taskList"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Your Progress</h2>
+        <div style="background: #ddd; width: 100%; border-radius: 5px">
+          <div
+            id="progressBar"
+            style="
+              background: #28a745;
+              width: 0%;
+              padding: 5px;
+              color: white;
+              text-align: center;
+              border-radius: 5px;
+            "
+          >
+            0%
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Pomodoro Timer ⏳</h2>
+        <p id="timer">25:00</p>
+        <button onclick="startPomodoro()">Start</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
